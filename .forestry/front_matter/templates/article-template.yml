@@ -1,0 +1,15 @@
+---
+label: Article Template
+hide_body: false
+is_partial: false
+fields:
+- type: file
+  name: call_out_image
+  label: Call Out Image
+- type: select
+  name: category
+  config:
+    source:
+      type: documents
+    required: true
+  label: Category
