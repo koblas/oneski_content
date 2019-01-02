@@ -10,6 +10,12 @@ fields:
   name: category
   config:
     source:
-      type: documents
+      type: simple
+      section: pages
     required: true
+    options:
+    - Safety
+    - Equipment
+    - News
+    - Insipriation
   label: Category
