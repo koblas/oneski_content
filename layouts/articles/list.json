@@ -1,0 +1,12 @@
+{{ define "response" }}
+{{- $articles := where .Pages "Section" "articles" -}}
+    {
+        "group" : "{{.Type}}::{{ .Title }}",
+        "count" : "{{ len $articles }}",
+        "articles" : [
+        {{ range $index, $e := $articles }}
+            {{ if $index }}, {{ end }}{{ .Render "item_short" }}
+        {{ end }}
+        ]
+    }
+{{ end }}

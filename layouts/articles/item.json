@@ -1,0 +1,11 @@
+{
+    "name": "{{ .Title }}",
+    "permalink" : "{{ .Permalink }}",
+    {{ range $index, $e := .Site.Taxonomies }}
+    	{{ with $.Param $index }}
+    		,"{{ $index }}" : "{{ delimit . ", "}}"
+    	{{ end }}
+    {{ end }}
+    "content": "{{ .RawContent }}",
+   	
+}

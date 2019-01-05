@@ -1,0 +1,10 @@
+{
+    "name": "{{ .Title }}",
+    "permalink" : "{{ .Permalink }}",
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+    	{{ with $.Param $taxonomyname }}
+    		"{{ $taxonomyname }}" : "{{ delimit . ", "}}",
+    	{{ end }}
+    {{ end }}
+    "": ""
+}
