@@ -1,6 +1,7 @@
 {
     "name": "{{ .Title }}",
     "permalink" : "{{ .Permalink }}",
+    "image" : "{{ .Params.call_out_image }}",
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
     	{{ with $.Param $taxonomyname }}
     		"{{ $taxonomyname }}" : "{{ delimit . ", "}}",
