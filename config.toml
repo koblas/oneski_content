@@ -1,4 +1,37 @@
-baseURL = "http://example.org/"
+#baseURL = "http://example.org/"
+#languageCode = "en-us"
+#title = "My New Hugo Site"
+#theme = "ananke"
+
+baseURL = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "ananke"
+title = "rougon"
+
+[outputs]
+  page = ["json"]
+  home = ["json"]
+  #teams = ["json"]
+  section = ["json"]
+  categories = ["json"]
+  taxonomy = ["json"]
+
+#[mediaTypes."text/netlify"]
+#suffix = ""
+#delimiter = ""
+
+[outputFormats.articles]
+  baseName = "articles"
+  mediatype ="application/json"
+
+#[outputFormats.redirect]
+#  #mediatype = "text/netlify"
+#  baseName = "_redirects"
+
+[taxonomies]
+#  sport = "sports"
+#  practice = "practices"
+   category = "categories"
+   tag = "tags"
+
+[permalinks]
+    page = "/:section/:title/"
