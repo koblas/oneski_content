@@ -1,13 +1,11 @@
 {
-    "title": "{{ .Title }}",
-    "key": "{{ .Permalink }}",
-    "image": "{{ .Params.call_out_image }}",
-    "category": "{{ .Params.categories }}",
-
+    "title": {{ .Title | jsonify }},
+    "image": {{ .Params.call_out_image | jsonify }},
+    "category": {{ .Params.categories | jsonify }},
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-    	{{ with $.Param $taxonomyname }}
-    		"{{ $taxonomyname }}" : "{{ delimit . ", "}}",
-    	{{ end }}
+      {{ with $.Param $taxonomyname }}
+    "{{ $taxonomyname }}" : {{ . | jsonify }},
+      {{ end }}
     {{ end }}
-    "": ""
+    "key": {{ .Permalink | jsonify }}
 }
