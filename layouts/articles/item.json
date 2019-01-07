@@ -1,12 +1,12 @@
 {
-    "name": {{ .Title | jsonify }},
+    "title": {{ .Title | jsonify }},
     "image": {{ .Params.call_out_image | jsonify }},
-    "permalink" : {{ .Permalink | jsonify }},
+    "category": {{ .Params.categories | jsonify }},
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
       {{ with $.Param $taxonomyname }}
     "{{ $taxonomyname }}" : {{ . | jsonify }},
       {{ end }}
     {{ end }}
+    "key": {{ .Permalink | jsonify }},
     "content": {{ .RawContent | jsonify }}
-   	
 }
