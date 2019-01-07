@@ -1,11 +1,11 @@
 {
-    "name": "{{ .Title }}",
-    "permalink" : "{{ .Permalink }}",
-    {{ range $index, $e := .Site.Taxonomies }}
-    	{{ with $.Param $index }}
-    		,"{{ $index }}" : "{{ delimit . ", "}}"
-    	{{ end }}
+    "name": {{ .Title | jsonify }},
+    "permalink" : {{ .Permalink | jsonify }},
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      {{ with $.Param $taxonomyname }}
+    "{{ $taxonomyname }}" : {{ . | jsonify }},
+      {{ end }}
     {{ end }}
-    "content": "{{ .RawContent }}",
+    "content": {{ .RawContent | jsonify }},
    	
 }
