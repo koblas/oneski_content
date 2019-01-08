@@ -3,6 +3,12 @@ label: Article Template
 hide_body: false
 is_partial: false
 fields:
+- type: text
+  name: title
+  label: Title
+  description: Article Title
+  config:
+    required: true
 - type: file
   name: call_out_image
   label: Call Out Image
