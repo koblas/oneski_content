@@ -14,3 +14,5 @@ fields:
   description: Unique ID (lower case version of title)
   config:
     required: true
+pages:
+- content/categories/humor.md
