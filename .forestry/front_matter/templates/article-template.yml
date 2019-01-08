@@ -19,5 +19,9 @@ fields:
     - News
     - Insipriation
   label: Category
+  default: Safety
+- type: tag_list
+  name: tags
+  label: Tags
 pages:
 - content/shin-ache.md
