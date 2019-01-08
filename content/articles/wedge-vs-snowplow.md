@@ -1,7 +1,7 @@
 +++
 author = "David Koblas"
 call_out_image = "/uploads/00330004.jpg"
-categories = "equipment"
+categories = "teaching"
 category = "Teaching"
 date = "2019-01-08T05:00:00+00:00"
 tags = []
