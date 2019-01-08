@@ -26,7 +26,7 @@ fields:
     - Humor
     - Teaching
   label: Category
-  default: Safety
+  default: Equipment
 - type: tag_list
   name: tags
   label: Tags
@@ -34,6 +34,12 @@ fields:
   name: date
   label: Date
   description: Published Date
+  config:
+    required: true
+- type: text
+  name: author
+  label: Author
+  description: Article Author
   config:
     required: true
 pages:
