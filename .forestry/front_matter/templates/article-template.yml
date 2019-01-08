@@ -20,10 +20,11 @@ fields:
       section: pages
     required: true
     options:
-    - Safety
     - Equipment
     - News
     - Insipriation
+    - Humor
+    - Teaching
   label: Category
   default: Safety
 - type: tag_list
