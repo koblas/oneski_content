@@ -1,9 +1,9 @@
 +++
 call_out_image = "/uploads/september-winner.jpg"
 categories = "equipment"
+category = "Safety"
 date = "2019-01-02T22:00:26+00:00"
-draft = false
-tags = ["boots","biomechanics"]
+tags = ["boots", "biomechanics"]
 title = "Why do my shinks ache"
 
 +++
