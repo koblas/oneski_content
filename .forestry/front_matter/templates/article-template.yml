@@ -13,20 +13,20 @@ fields:
   name: call_out_image
   label: Call Out Image
 - type: select
-  name: category
+  name: categories
   config:
     source:
-      type: simple
-      section: pages
+      type: pages
+      section: categories
     required: true
     options:
-    - Equipment
-    - News
-    - Insipriation
-    - Humor
-    - Teaching
+    - equipment
+    - news
+    - insipriation
+    - humor
+    - teaching
   label: Category
-  default: Equipment
+  default: categories/equipment.md
 - type: tag_list
   name: tags
   label: Tags
