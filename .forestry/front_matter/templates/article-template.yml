@@ -43,5 +43,4 @@ fields:
   config:
     required: true
 pages:
-- content/shin-ache.md
 - content/articles/wedge-vs-snowplow.md
