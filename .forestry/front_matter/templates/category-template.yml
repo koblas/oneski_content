@@ -16,3 +16,4 @@ fields:
     required: true
 pages:
 - content/categories/humor.md
+- content/categories/news.md
