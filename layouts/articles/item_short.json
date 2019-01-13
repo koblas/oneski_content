@@ -1,6 +1,7 @@
 {
     "title": {{ .Title | jsonify }},
     "image": {{ .Params.call_out_image | jsonify }},
+    "date": {{ .Params.date | jsonify }},
     "category": {{ .Params.categories | jsonify }},
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
       {{ with $.Param $taxonomyname }}
