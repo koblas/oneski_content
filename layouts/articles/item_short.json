@@ -8,5 +8,5 @@
     "{{ $taxonomyname }}" : {{ . | jsonify }},
       {{ end }}
     {{ end }}
-    "key": {{ .Permalink | jsonify }}
+    "permalink": {{ .Permalink | jsonify }}
 }
